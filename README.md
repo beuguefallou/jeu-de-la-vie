@@ -6,14 +6,14 @@
 * [Fonctionnalités principales](#fonctionnalités-principales)
 
 ## Informations
-Jeu de la vie interactif est un projet réalisé dans le cadre de la 2ème année du Peip à Polytech Tours par Alexis Desaint-Denis et Alexis Chatelain.  
+Jeu de la vie interactif est un projet réalisé dans le cadre d' un petit challenge qu'on nous a proposé  par [Elias W. BA](#https://twitter.com/eliaswalyba).  
 Le projet se présente sous la forme d'un site Web consultable sur tous les navigateurs représentant une grille du jeu de la vie interactive et de nombreuses autres fonctionnalités.  
 Nous avons utilisé le langage JavaScript accompagné de HTML/CSS pour l'apparence du site Web.
+# GameLife
+Jeu de la vie créé en javascript
+pour 138 colonnes et 93 lignes sur 50 générations
 
-## Fonctionnalités principales
-* Règles de base du jeu de la vie
-* Personnalisation de la grille (longueur, largeur, taille des cellules, vitesse ..)
-* Remplissage aléatoire
-* Insertion de formes spécifiques du jeu de la vie
-* Insertion de caractères ASCII
-* Graphique dynamique représentant le nombre de cellules vivantes en fonction du nombre d'itérations
+- main, exécution en ~ 20ms
+- mainCanvas en ~ 14ms
+
+Merci à [SuperPommeDeTerre]( https://github.com/SuperPommeDeTerre ) et à [JDelauney]( https://github.com/jdelauney ) pour l'aide apportée :)
