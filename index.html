@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"> </script>
+    <title>Jeu de la vie</title>
+</head>
+<body>
+    <div id='img_dynamique_container' style="position:absolute; left:0px; top:0px; display:block;"></div>
+    <h1>Jeu de la vie</h1>
+    <div id="modal_forms" class="modal">
+        <div id="forms_content">
+          <span id="close_list">&times;</span>
+          <h4>Liste des formes spécifiques</h4>
+        </div>
+    </div>
+    <div class="game-container">
+        <canvas id="grille">Votre navigateur n'est pas compatible avec la technologie utilisée.</canvas>
+
+        <div id="data-container">            
+            <canvas id="graph" width="600" height="300" style="display:none;"></canvas>
+            <fieldset id="statistiques">
+                <legend>Statistiques</legend>
+                <label for="iterations">Nombre d'itérations :</label><br>
+                <output id="iterations">0</output> <br>
+                <label for="alive">Cellules en vie :</label> <br>
+                <output id="alive">0</output> <br>
+                <label for="temps_iteration">Temps par itération :</label> <br>
+                <output id="temps_iteration">1 seconde</output> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Paramètres</legend>                
+                <label for="longueur_grille">Longueur de la grille :</label> <br>
+                <input type="range" id="longueur_grille" value="600" min="100" max="1000" onchange="sizeChange()" oninput="longueur_output.value = this.value">
+                <input id="longueur_output" type="number" min="100" max="1000" value="600" oninput="checkInputValue(this, longueur_grille);" onfocusout="checkMinValue(this)"> <br>
+
+                <label for="largeur_grille">Largeur de la grille :</label> <br>
+                <input type="range" id="largeur_grille" value="600" min="100" max="1000" onchange="sizeChange()" oninput="largeur_output.value = this.value">
+                <input id="largeur_output" type="number" min="100" max="1000" value="600" oninput="checkInputValue(this, largeur_grille);" onfocusout="checkMinValue(this)"> <br>
+
+                <label for="taille_cellule">Taille des cellules :</label> <br>
+                <input type="range" id="taille_cellule" value="20" min="5" max="40" onchange="sizeChange()" oninput="taille_cellule_output.value = this.value">
+                <input id="taille_cellule_output" type="number" min="5" max="40" value="20" oninput="checkInputValue(this, taille_cellule);" onfocusout="checkMinValue(this)"> <br>
+
+                <label for="vitesse">Vitesse :</label> <br>
+                <input type="range" id="vitesse" value="1" min="0" max="2" step="0.1" oninput="inputVitesse(this)">
+                <output id="vitesse_output">1</output> <br>
+
+                <label for="taux_remplissage">Taux de remplissage (uniquement en mode aléatoire):</label> <br>
+                <input type="range" id="taux_remplissage" value="30" min="0" max="100" oninput="taux_remplissage_output.value = this.value">
+                <input id="taux_remplissage_output" type="number" value="30" min="0" max="100" oninput="checkInputValue(this, taux_remplissage);" onfocusout="checkMinValue(this)" > % <br>
+
+                <label for="display_stats">Afficher le graphique des statistiques :</label>
+                <input type="checkbox" id="display_stats" onchange="toggleGraph(this.checked);"><br>
+
+                <label for="mode_grille">Grille fermée (côtés ne se rejoignent pas) :</label>
+                <input type="checkbox" id="mode_grille" onchange="gridMode=this.checked;">
+
+            </fieldset>
+            <fieldset id="specific_forms_parent">
+                <legend>Formes spécifiques</legend>
+                <div id="specific_forms">
+                    <button id="display_forms_list">Liste des formes spécifiques</button>
+                </div>
+                <label for="insert_character">Insérer une expression (nombres, lettres, caractères spéciaux sauf accents, ..) à insérer dans la grille:</label> <br>
+                <input type="text" id="insert_character" required>
+                <button id="insert_character_button" onclick="insertCharacters(insert_character.value);">OK</button>
+            </fieldset>
+        </div>
+        <div id="controls">
+            <button title="Démarrer/Arrêter" onclick="playPause();">
+                <img id="button_play" alt="Démarrer/Arrêter" src="images/play.png"/>
+            </button>
+            <button title="Remplissage aléatoire" onclick="random();">
+                <img alt="Remplissage aléatoire" src="images/random.png"/>
+            </button>
+            <button title="Effacer la grille" onclick="clearGrid()">
+                <img alt="Effacer la grille" src="images/clear.png"/>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <p>Réalisé dans le cadre d'un petit projet de challenge<sup></sup>Zone 01 Dakar par Mouhamdou Fadilou Diop</p>
+    </footer>
+    <script>if(window.navigator.userAgent.indexOf('MSIE')>0 || window.navigator.userAgent.indexOf('Trident')>0){ document.location='IE_incompatible.html';} </script>
+    <script src="listener.js"> </script>
+    <script src="class.js"> </script>
+    <script src="formes.js"> </script>
+    <script src="game.js"> </script>
+    <script src="graph.js"> </script>
+</body>
