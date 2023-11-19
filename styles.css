@@ -1,0 +1,121 @@
+.title, .subTitle {
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-bottom: 30px;
+}
+
+.regle {
+	text-align: center;
+	border: solid black 1px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	border-radius: 10px;
+	width: 500px;
+	margin: auto;
+	padding: 20px;
+	background-color: antiquewhite;
+	
+}
+
+#tour {
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: bold;
+	font-size: x-large;
+	padding-top: 20px;
+}
+
+* {
+	margin: 5px;
+	padding: 0px;
+}
+
+table {
+        border-spacing: 0px;
+}
+
+input {
+	margin: 7px;
+}
+
+h2 {
+	font-size: x-large;
+}
+
+h3 {
+	font-size: large;
+}
+
+.blackBorder {
+	border: white solid 0.1px;
+}
+
+.whiteBorder {
+	border: black solid 0.1px;
+}
+
+.blackBG {
+	background-color: black;
+}
+
+.whiteBG {
+	background-color: white;
+}
+
+.red {
+	color: red;
+}
+
+.blackBorder, .whiteBorder {
+	border-right: none;
+	border-top: none;
+}
+
+.whiteBorder:last-child {
+	border-right: black solid 0.1px;
+}
+
+.whiteBorder.boxesL1 {
+	border-top: black solid 0.1px;
+}
+
+input[type=button] {
+	background-color: antiquewhite;
+	padding: 5px;
+	border-radius: 5px;
+	border: solid black 1px;
+	box-shadow: 1px 1px 1px black;
+	
+}
+
+input[type=text] {
+	border-radius: 5px;
+	border: solid black 1px;
+	padding: 2px;
+	margin: 6px;
+}
+
+input[type=button]:hover {
+	cursor: pointer;
+	background-color: rgb(255, 249, 241);
+}
+
+.hide {
+	display: none;
+}
+
+#menuGrille {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.textAlignCenter {
+	text-align: center;
+}
+
+ #boxesApp {
+	margin: auto;
+ }
+
+ #menu {
+	margin-top: 20px;
+ }
