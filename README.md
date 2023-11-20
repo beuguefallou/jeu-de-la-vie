@@ -26,5 +26,5 @@ Règles :
 ## Images de présentation :
 
 <div>
-<img align=top src="https://github.com/beuguefallou/jeu-de-la-vie/main/presentation_pictures/picture_01.jpg" width="700px">
+<img align=top src="https://github.com/beuguefallou/jeu-de-la-vie/blob/main/presentation_pictures/picture_01.jpg" width="900px">
 </div>
