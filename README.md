@@ -1,4 +1,4 @@
-# Jeu-de-la-vie | Projet personnel | [FR]
+# Jeu-de-la-vie 
 
 ## Informations
 
@@ -21,10 +21,10 @@ Règles :
 
 ## Liens du projet :
 
-### Web-Application : https://damien-auversack.github.io/Jeu-de-la-vie/
+### Web-Application :  https://beuguefallou.github.io/
 
 ## Images de présentation :
 
 <div>
-<img align=top src="https://github.com/damien-auversack/jeudelavie/blob/main/presentation_pictures/picture_01.jpg" width="700px">
+<img align=top src="https://github.com/beuguefallou/jeu-de-la-vie/main/presentation_pictures/picture_01.jpg" width="700px">
 </div>
